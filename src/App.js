@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // layouts
 import MainLayout from './layouts/MainLayout';
+import Footer from './layouts/Footer';
 
 // pages
 import Main from './pages/main_page/Main';
@@ -19,9 +20,12 @@ import Drawing from './pages/hobby_page/Drawing';
 import Guitar from './pages/hobby_page/Guitar';
 import Watching from './pages/hobby_page/Watching';
 import Game from './pages/hobby_page/Game';
+import Banner from './layouts/Banner';
+
 
 const App = () => {
   return (
+    <>
     <Routes>
       <Route element={<MainLayout />}>
           <Route path="/" element={<Main />} />
@@ -38,6 +42,7 @@ const App = () => {
           <Route path="/game" element={<Game />} />
       </Route>
     </Routes>
+    </>
   );
 };
 
